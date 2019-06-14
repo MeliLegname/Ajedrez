@@ -1,7 +1,7 @@
 // import React from 'react';
 
 // let knightPosition = [ 0, 0 ];
-let knightPosition = [ 1, 7 ];
+let knightPosition = [ 1, 3 ];
 let observer = null;
 
 function emitChange() {

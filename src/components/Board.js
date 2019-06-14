@@ -1,3 +1,6 @@
+import { DragDropContextProvider } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
+
 import React from 'react';
 import Square from './Square';
 import Knight from './Knight';
@@ -13,7 +16,9 @@ function renderSquare(i, [ knightX, knightY ]) {
 	return (
 		<div key={i} style={{ width: '12.5%', height: '12.5%' }}>
 			<div onClick={() => handleSquareClick(x, y)}>
-				<Square black={black}>{piece}</Square>
+				<Square black={black}>
+					<DragDropContextProvider backend={HTML5Backend}>{piece}</DragDropContextProvider>
+				</Square>
 			</div>
 		</div>
 	);
